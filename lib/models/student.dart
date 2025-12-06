@@ -22,6 +22,7 @@ class Student {
     required this.gpa,
   });
 
-  factory Student.fromJson(Map<String, dynamic> json) => _$StudentFromJson(json);
+  factory Student.fromJson(Map<String, dynamic> json) =>
+      _$StudentFromJson(json);
   Map<String, dynamic> toJson() => _$StudentToJson(this);
 }

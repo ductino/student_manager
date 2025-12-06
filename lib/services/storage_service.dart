@@ -14,7 +14,9 @@ class StorageService {
     final jsonStr = _prefs?.getString(_key);
     if (jsonStr == null || jsonStr.isEmpty) return [];
     final list = jsonDecode(jsonStr) as List<dynamic>;
-    return list.map((e) => Student.fromJson(Map<String, dynamic>.from(e))).toList();
+    return list
+        .map((e) => Student.fromJson(Map<String, dynamic>.from(e)))
+        .toList();
   }
 
   Future<void> saveStudents(List<Student> students) async {
