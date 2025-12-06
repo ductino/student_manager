@@ -2,53 +2,36 @@
 
 Ứng dụng mẫu cho Bài tập lớn – Quản lý Sinh viên (Simple Student Manager)
 
-📑 Mục lục
-
-Giới thiệu
-
-Chức năng
-
-Công nghệ sử dụng
-
-Cài đặt và chạy ứng dụng
-
-Kiểm thử tự động
-
-Báo cáo kết quả
-
-Hướng dẫn kiểm tra ứng dụng
-
-📝 Giới thiệu
-
-Student Manager là ứng dụng Flutter đa nền tảng (Mobile + Web), đáp ứng yêu cầu của bài tập lớn môn học.
-Ứng dụng cho phép quản lý thông tin sinh viên với các chức năng CRUD và tìm kiếm. Ngoài ra, project được tích hợp kiểm thử tự động và CI/CD bằng GitHub Actions.
-
 🚀 Chức năng
-🔹 1. Thuộc tính sinh viên (Student Model)
+1. Quản lý sinh viên
 
-Mỗi sinh viên gồm:
+Thêm – Sửa – Xóa – Tìm kiếm
 
-id — Định danh duy nhất
+Thuộc tính sinh viên:
 
-mssv — Mã số sinh viên
+id
 
-name — Họ và tên
+mssv
 
-birthday — Ngày sinh
+name
 
-gender — Giới tính
+birthday
 
-className — Lớp
+gender
 
-gpa — Điểm trung bình
+className
 
-🔹 2. Lưu trữ & Quản lý trạng thái
+gpa
 
-Lưu trữ cục bộ: sử dụng localstore hoặc SharedPreferences để lưu dữ liệu dạng JSON, hỗ trợ chạy offline.
+2. Lưu trữ & Trạng thái
 
-Quản lý trạng thái: dùng Provider.
+Lưu dữ liệu cục bộ bằng localstore hoặc SharedPreferences
 
-🔹 3. Hỗ trợ nền tảng
+Quản lý trạng thái bằng Provider
+
+Hỗ trợ offline
+
+3. Hỗ trợ nền tảng
 
 Android
 
@@ -56,29 +39,29 @@ iOS
 
 Web
 
-🔹 4. Tích hợp CI/CD
+4. CI/CD (GitHub Actions)
 
-GitHub Actions tự động chạy:
-
-flutter test
-
-flutter analyze
+Tự động chạy khi push:
 
 dart format --set-exit-if-changed .
 
+flutter analyze
+
+flutter test
+
 🧰 Công nghệ sử dụng
 
-Flutter & Dart – xây dựng UI và logic
+Flutter / Dart
 
-Provider – State management
+Provider
 
-localstore / SharedPreferences – Lưu dữ liệu cục bộ
+localstore / SharedPreferences
 
-mocktail / mockito – Test
+mocktail / mockito
 
-GitHub Actions – CI/CD workflow
+GitHub Actions
 
-⚙️ Cài đặt và chạy ứng dụng
+⚙️ Cài đặt
 1️⃣ Clone dự án
 git clone <LINK_REPO_CỦA_BẠN>
 cd student_manager
@@ -86,7 +69,7 @@ cd student_manager
 2️⃣ Cài đặt dependencies
 flutter pub get
 
-3️⃣ (Tùy chọn) Sinh code nếu dùng build_runner
+3️⃣ (Tùy chọn) Build code tạo sẵn
 flutter pub run build_runner build --delete-conflicting-outputs
 
 4️⃣ Chạy ứng dụng
@@ -106,48 +89,34 @@ flutter test
 
 Bao gồm:
 
-Unit Test – logic Service & Provider
+Unit Test (Service + Provider)
 
-Widget Test – kiểm tra UI (StudentListScreen, Form, Buttons…)
+Widget Test (List screen, Form screen)
 
-Tất cả bài test phải PASS để CI xanh.
+Mock Service (mocktail)
 
-📊 Báo cáo kết quả
-Thông tin sinh viên
-
-Họ và tên: <Điền tên của bạn>
-
-MSSV: <Điền MSSV của bạn>
-
-Lớp: <Điền lớp của bạn>
-
-Tự đánh giá: X/10
-
-🏗️ Tóm tắt quá trình phát triển
-
-Dự án được tổ chức theo kiến trúc Layered:
-Model → Service → Provider → UI
-
-Model: đại diện dữ liệu sinh viên
-
-Service: xử lý lưu trữ bằng localstore
-
-Provider: cung cấp CRUD và cập nhật UI theo thời gian thực
-
-UI: gồm màn danh sách sinh viên + form thêm/sửa
-
-✅ Kết quả kiểm thử tự động
+📊 Kết quả kiểm thử tự động
 Loại kiểm thử	Mô tả	Kết quả
-Unit Test (Service)	Kiểm tra load/save dữ liệu với mock	✅ PASS
-Unit Test (Provider)	Kiểm tra add, update, delete	✅ PASS
-Widget Test	StudentListScreen & StudentFormScreen	✅ PASS
-GitHub Actions CI	chạy analyze + test tự động	✅ PASS
-🕵️ Hướng dẫn kiểm tra ứng dụng
+Unit Test (Service)	load/save dữ liệu với mock	✅ PASS
+Unit Test (Provider)	add, update, delete	✅ PASS
+Widget Test	UI: StudentListScreen + Form	✅ PASS
+CI qua GitHub Actions	analyze + test	✅ PASS
+🕵️ Hướng dẫn tự kiểm tra
 
-CRUD: thêm – sửa – xóa sinh viên → UI cập nhật ngay
+Thêm – sửa – xóa sinh viên → UI cập nhật tức thì
 
-Lưu trữ: đóng ứng dụng → mở lại → dữ liệu còn
+Đóng app → mở lại → dữ liệu còn
 
-UI: tìm kiếm theo tên hoặc MSSV
+Tìm kiếm theo tên hoặc MSSV
 
-Kiểm thử: chạy flutter test để xem trạng thái PASS
+Chạy flutter test để xem trạng thái PASS
+
+👤 Thông tin sinh viên (điền vào báo cáo)
+
+Họ và tên: …
+
+MSSV: …
+
+Lớp: …
+
+Tự đánh giá: … /10
