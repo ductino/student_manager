@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:student_manager/providers/student_provider.dart';
 import 'package:student_manager/screens/student_list_screen.dart';
 
-import '../mocks/mock_storage_service.dart'; 
+import '../mocks/mock_storage_service.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
