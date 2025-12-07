@@ -3,11 +3,11 @@ Thông tin sinh viên<br>
 Họ và tên: Phạm Văn Đức<br>
 MSSV: 2221050336<br>
 Lớp: DCCTCLC67A<br>
-________________________________________
+
 1. Giới thiệu<br>
 Student Manager là ứng dụng Flutter đa nền tảng (Android, iOS, Web) được xây dựng nhằm đáp ứng yêu cầu bài tập lớn của học phần.<br>
 Ứng dụng hỗ trợ CRUD sinh viên, lưu trữ cục bộ, quản lý trạng thái bằng Provider và tích hợp kiểm thử tự động – CI/CD bằng GitHub Actions.<br>
-________________________________________
+
 2. Mục tiêu bài tập<br>
 •	Lập trình UI với Flutter & Dart.<br>
 •	Áp dụng Provider để quản lý trạng thái.<br>
@@ -15,7 +15,7 @@ ________________________________________
 •	Lưu trữ dữ liệu offline bằng Localstore/SharedPreferences.<br>
 •	Viết unit test và widget test.<br>
 •	Thiết lập CI/CD GitHub Actions.<br>
-________________________________________
+
 3. Chức năng của ứng dụng<br>
 3.1 CRUD sinh viên<br>
 Ứng dụng cung cấp đầy đủ chức năng:<br>
@@ -31,22 +31,22 @@ Thuộc tính sinh viên:<br>
 •	gender – giới tính<br>
 •	className – lớp<br>
 •	gpa – điểm trung bình<br>
-________________________________________
+
 3.2 Giao diện người dùng<br>
 Gồm 2 màn hình chính:<br>
 •	Danh sách sinh viên<br>
 •	Form thêm/sửa sinh viên<br>
 Giao diện đơn giản, trực quan, dễ thao tác.<br>
-________________________________________
+
 3.3 Lưu trữ dữ liệu<br>
 •	Lưu cục bộ bằng localstore hoặc SharedPreferences<br>
 •	Dữ liệu ở dạng JSON<br>
 •	Hỗ trợ chạy offline<br>
-________________________________________
+
 3.4 Quản lý trạng thái<br>
 •	Sử dụng Provider<br>
 •	UI cập nhật ngay khi dữ liệu thay đổi<br>
-________________________________________
+
 4. Kiểm thử & CI/CD<br>
 Kiểm thử tự động<br>
 •	Unit Test: Service, Provider<br>
@@ -55,7 +55,7 @@ GitHub Actions chạy tự động:<br>
 •	dart format --set-exit-if-changed .<br>
 •	flutter analyze<br>
 •	flutter test<br>
-________________________________________
+
 5. Công nghệ sử dụng<br>
 •	Flutter / Dart<br>
 •	Provider<br>
@@ -63,7 +63,7 @@ ________________________________________
 •	mocktail hoặc mockito<br>
 •	flutter_test<br>
 •	GitHub Actions<br>
-________________________________________
+
 6. Cài đặt & chạy ứng dụng<br>
 1. Clone dự án<br>
 git clone <link_repo>
@@ -78,7 +78,7 @@ Chạy trên web:<br>
 flutter run -d chrome
 5. Chạy kiểm thử<br>
 flutter test
-________________________________________
+
 7. Kết quả báo cáo<br>
 7.1 Kết quả kiểm thử tự động<br>
 •	Unit Test (Service): PASS<br>
@@ -90,7 +90,7 @@ ________________________________________
 •	Tìm kiếm theo tên hoặc MSSV<br>
 •	Dữ liệu vẫn giữ sau khi mở lại app<br>
 •	UI cập nhật theo thời gian thực<br>
-________________________________________
+
 8. Tự đánh giá<br>
 10/10<br>
 
