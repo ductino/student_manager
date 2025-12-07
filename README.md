@@ -1,4 +1,4 @@
-Bài tập lớn – Ứng dụng Student Manager (Flutter)
+Student Manager – Bài tập lớn Flutter
 Thông tin sinh viên
 
 Họ và tên: Phạm Văn Đức
@@ -9,82 +9,86 @@ Lớp: DCCTCLC67A
 
 1. Giới thiệu
 
-Student Manager là ứng dụng Flutter đa nền tảng (Mobile + Web) được xây dựng nhằm đáp ứng yêu cầu bài tập lớn của học phần.
-Ứng dụng hỗ trợ quản lý sinh viên theo mô hình CRUD, lưu trữ dữ liệu cục bộ, quản lý trạng thái bằng Provider, có kiểm thử tự động và CI/CD bằng GitHub Actions.
+Student Manager là ứng dụng Flutter đa nền tảng (Android, iOS, Web) được xây dựng cho bài tập lớn học phần.
+Ứng dụng cho phép quản lý sinh viên theo mô hình CRUD, lưu dữ liệu cục bộ, sử dụng Provider cho quản lý trạng thái và hỗ trợ kiểm thử tự động cũng như CI/CD bằng GitHub Actions.
 
 2. Mục tiêu bài tập
 
-Sinh viên hoàn thành bài tập lớn nhằm:
+Bài tập giúp sinh viên:
 
-Thực hành lập trình giao diện với Flutter & Dart.
+Lập trình UI với Flutter & Dart
 
-Hiểu và áp dụng quản lý trạng thái (Provider).
+Áp dụng Provider để quản lý trạng thái
 
-Thiết kế kiến trúc Model – Service – Provider.
+Tổ chức ứng dụng theo mô hình Model – Service – Provider – UI
 
-Lưu trữ dữ liệu với Localstore / SharedPreferences.
+Lưu trữ dữ liệu offline
 
-Viết unit test, widget test.
+Viết unit test và widget test
 
-Thiết lập CI/CD GitHub Actions chạy kiểm thử tự động.
+Thiết lập CI/CD bằng GitHub Actions
 
-3. Yêu cầu & Chức năng ứng dụng
-3.1. CRUD Sinh viên
+3. Chức năng của ứng dụng
+3.1 CRUD sinh viên
 
 Ứng dụng hỗ trợ đầy đủ:
 
 Thêm sinh viên
 
-Xem chi tiết
-
 Sửa thông tin
 
 Xóa sinh viên
 
-Thuộc tính mỗi sinh viên:
-Thuộc tính	Mô tả
-id	Định danh duy nhất
-mssv	Mã số sinh viên
-name	Họ và tên
-birthday	Ngày sinh
-gender	Giới tính
-className	Lớp
-gpa	Điểm trung bình
+Xem danh sách sinh viên
 
-Model được viết bằng Dart.
+Thông tin sinh viên gồm:
 
-3.2. Giao diện người dùng
+id – định danh duy nhất
 
-Giao diện đơn giản, trực quan và dễ sử dụng, gồm:
+mssv – mã số sinh viên
+
+name – họ và tên
+
+birthday – ngày sinh
+
+gender – giới tính
+
+className – lớp
+
+gpa – điểm trung bình
+
+3.2 Giao diện người dùng
+
+Các màn hình chính:
 
 Danh sách sinh viên
 
 Form thêm/sửa sinh viên
 
-3.3. Lưu trữ dữ liệu
+Giao diện đơn giản, trực quan, dễ sử dụng.
 
-Ứng dụng sử dụng:
+3.3 Lưu trữ dữ liệu
 
-localstore để lưu JSON cục bộ
+Lưu cục bộ bằng localstore hoặc SharedPreferences
 
-Chạy hoàn toàn offline
+Dữ liệu được lưu dưới dạng JSON
 
-Service chịu trách nhiệm load/save dữ liệu
+Ứng dụng hoạt động offline
 
-3.4. Quản lý trạng thái
+3.4 Quản lý trạng thái
 
 Sử dụng Provider
 
-UI tự động cập nhật khi thêm – sửa – xóa
+UI tự cập nhật khi có thay đổi dữ liệu
 
-3.5. Kiểm thử tự động & CI/CD
-Viết test:
+4. Kiểm thử & CI/CD
+Kiểm thử tự động gồm:
 
-Unit Test: Service & Provider
+Unit Test: Service, Provider
 
-Widget Test: Màn hình danh sách + form
+Widget Test: màn hình danh sách và form
 
-GitHub Actions chạy tự động:
+GitHub Actions tự động chạy:
 
 dart format --set-exit-if-changed .
 
@@ -92,26 +96,32 @@ flutter analyze
 
 flutter test
 
-4. Công nghệ sử dụng
-Công nghệ	Mục đích
-Flutter / Dart	Xây dựng ứng dụng
-Provider	Quản lý trạng thái
-localstore / SharedPreferences	Lưu dữ liệu offline
-mocktail / mockito	Mock để kiểm thử
-flutter_test	Framework test
-GitHub Actions	CI/CD
-5. Cài đặt & Chạy ứng dụng
-1. Tải mã nguồn
+5. Công nghệ sử dụng
+
+Flutter / Dart
+
+Provider
+
+localstore / SharedPreferences
+
+mocktail hoặc mockito
+
+flutter_test
+
+GitHub Actions
+
+6. Cài đặt và chạy ứng dụng
+Bước 1: Clone dự án
 git clone <link_repo>
 cd student_manager
 
-2. Cài dependencies
+Bước 2: Cài dependencies
 flutter pub get
 
-3. (Tùy chọn) Generate code
+Bước 3 (tùy chọn): Build code generate
 flutter pub run build_runner build --delete-conflicting-outputs
 
-4. Chạy ứng dụng
+Bước 4: Chạy ứng dụng
 flutter run
 
 
@@ -119,27 +129,30 @@ Chạy web:
 
 flutter run -d chrome
 
-5. Chạy kiểm thử
+Bước 5: Chạy kiểm thử
 flutter test
 
-6. Kết quả báo cáo
-6.1. Kết quả kiểm thử tự động
-Loại kiểm thử	Mô tả	Kết quả
-Unit Test (Service)	Kiểm tra load/save bằng mock	✓
-Unit Test (Provider)	Kiểm tra add/update/delete	✓
-Widget Test	Danh sách + Form	✓
-GitHub Actions	analyze + test	✓
-6.2. Kiểm tra chức năng trong ứng dụng
+7. Kết quả báo cáo
+7.1. Kết quả kiểm thử tự động
 
-Chức năng CRUD đầy đủ
+Unit Test (Service): Pass
+
+Unit Test (Provider): Pass
+
+Widget Test: Pass
+
+GitHub Actions (analyze + test): Pass
+
+7.2. Kiểm tra chức năng
+
+CRUD hoạt động tốt
 
 Tìm kiếm theo tên hoặc MSSV
 
-Dữ liệu không bị mất khi mở lại ứng dụng
+Dữ liệu vẫn còn khi mở lại app
 
-UI cập nhật ngay khi thao tác
+UI cập nhật theo trạng thái
 
-7. Tự đánh giá
+8. Tự đánh giá
 
 10/10
-Sinh viên tự đánh giá theo tiêu chí của giảng viên.
