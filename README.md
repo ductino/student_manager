@@ -59,8 +59,8 @@ GitHub Actions chạy tự động:<br>
 5. Công nghệ sử dụng<br>
 •	Flutter / Dart<br>
 •	Provider<br>
-•	localstore / SharedPreferences<br>
-•	mocktail hoặc mockito<br>
+•	localstore <br>
+•	Mock Storage Service<br>
 •	flutter_test<br>
 •	GitHub Actions<br>
 
