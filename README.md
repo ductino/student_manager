@@ -5,7 +5,7 @@ MSSV: 2221050336<br>
 Lớp: DCCTCLC67A<br>
 
 1. Giới thiệu<br>
-Student Manager là ứng dụng Flutter đa nền tảng (Android, iOS, Web) được xây dựng nhằm đáp ứng yêu cầu bài tập lớn của học phần.<br>
+Student Manager là ứng dụng Flutter đa nền tảng (Web) được xây dựng nhằm đáp ứng yêu cầu bài tập lớn của học phần.<br>
 Ứng dụng hỗ trợ CRUD sinh viên, lưu trữ cục bộ, quản lý trạng thái bằng Provider và tích hợp kiểm thử tự động – CI/CD bằng GitHub Actions.<br>
 
 2. Mục tiêu bài tập<br>
@@ -37,7 +37,7 @@ Gồm 2 màn hình chính:<br>
 • Form thêm/sửa sinh viên<br>
 Giao diện đơn giản, trực quan, dễ thao tác.<br>
 3.3 Lưu trữ dữ liệu<br>
-• Lưu cục bộ bằng localstore hoặc SharedPreferences<br>
+• Lưu cục bộ bằng localstore<br>
 • Dữ liệu ở dạng JSON<br>
 • Hỗ trợ chạy offline<br>
 3.4 Quản lý trạng thái<br>
@@ -61,38 +61,20 @@ GitHub Actions tự động chạy:<br>
 • flutter_test<br>
 • GitHub Actions<br>
 
-6. Cài đặt & chạy ứng dụng<br>
-1. Clone dự án<br>
-git clone <link_repo>
-cd student_manager
-<br> 
-2. Cài dependencies<br>
-flutter pub get
-<br> 
-3. (Tùy chọn) Generate code<br>
-flutter pub run build_runner build --delete-conflicting-outputs
-<br> 
-4. Chạy ứng dụng<br>
-flutter run
-Chạy trên web:<br>
-flutter run -d chrome
-<br> 
-5. Chạy kiểm thử<br>
-flutter test
-<br> 
 
-7. Kết quả báo cáo<br>
-7.1 Kết quả kiểm thử tự động<br>
+
+ Kết quả báo cáo<br>
+1 Kết quả kiểm thử tự động<br>
 • Unit Test (Service): PASS<br>
 • Unit Test (Provider): PASS<br>
 • Widget Test: PASS<br>
 • GitHub Actions CI: PASS<br>
-7.2 Kiểm tra chức năng<br>
+2 Kiểm tra chức năng<br>
 • CRUD đầy đủ<br>
 • Tìm kiếm theo tên hoặc MSSV<br>
 • Dữ liệu vẫn giữ sau khi mở lại app<br>
 • UI cập nhật theo thời gian thực<br>
 
-8. Tự đánh giá<br>
+ Tự đánh giá<br>
 10/10<br>
 
